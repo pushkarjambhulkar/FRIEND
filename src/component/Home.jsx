@@ -17,7 +17,7 @@ const Home = () => {
   // Fetch all users (excluding the current user)
   const fetchUsers = () => {
     axios
-      .get("http://localhost:5000/api/users", {
+      .get("https://friend-zdqg.onrender.com/api/users", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -39,7 +39,7 @@ const Home = () => {
   // Fetch the current user's friends
   const fetchFriends = () => {
     axios
-      .get("http://localhost:5000/api/friends", {
+      .get("https://friend-zdqg.onrender.com/api/friends", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -80,7 +80,7 @@ const Home = () => {
   const handleAddFriend = (user) => {
     axios
       .post(
-        "http://localhost:5000/api/friends/addNew",
+        "https://friend-zdqg.onrender.com/api/friends/addNew",
         { friendId: user._id },
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       )
@@ -94,7 +94,7 @@ const Home = () => {
   // Handle removing a friend
   const handleRemoveFriend = (friendId) => {
     axios
-      .delete(`http://localhost:5000/api/friends/${friendId}`, {
+      .delete(`https://friend-zdqg.onrender.com/api/friends/${friendId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then(() => {

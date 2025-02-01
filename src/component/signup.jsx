@@ -48,7 +48,7 @@ const Signup = () => {
     });
 
     try {
-      await axios.post("http://localhost:5000/api/auth/signup", formDataToSend, {
+      await axios.post("https://friend-zdqg.onrender.com/api/auth/signup", formDataToSend, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
