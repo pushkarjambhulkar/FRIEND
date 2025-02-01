@@ -1,6 +1,6 @@
 const express = require("express");
-const User = require("../model/user");
-const authMiddleware = require("../middleware/auth.js"); // Assuming you have middleware to validate JWT token
+const User = require("../model/userModel.js");
+const authMiddleware = require("../middleware/authMiddleware.js"); 
 const router = express.Router();
 
 // Get all users excluding the current user and their friends
